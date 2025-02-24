@@ -1,0 +1,978 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ligand PDB Searches &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2b91c5f0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Ligands';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Macromolecules" href="Macromolecules.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Small Molecule RCSB PDB Search
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Drug_Search.html">Drug Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Assembly_Search.html">Assemblies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Macromolecules.html">Macromolecules</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Ligand PDB Searches</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLigands.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Ligands.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ligand PDB Searches</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-contents">Notebook Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries">Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#novice-and-intermediate-coders">Novice and Intermediate Coders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experienced-coders">Experienced Coders</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-the-searches">Introducing the Searches</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#free-versus-polymeric-ligands">Free Versus Polymeric Ligands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ligands-of-interest">Ligands of Interest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ligand-binding-affinity">Ligand Binding Affinity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-ligand-complexes">Structure-Ligand Complexes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Free Versus Polymeric Ligands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ligand-of-interest-loi">Ligand of Interest (LOI)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Ligand Binding Affinity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Structure-Ligand Complexes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps-and-combining-searches">Next Steps and Combining Searches</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ligand-pdb-searches">
+<h1>Ligand PDB Searches<a class="headerlink" href="#ligand-pdb-searches" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>Ligands are ions or molecules that donate electrons to a central functional group to form a coordination complex. This notebook focuses on the different kinds of PDB searches surrounding ligands. While these searches are limited to interests relating to ligands, by combining them with other search queries, you can find highly specific outputs and data.</p>
+<p>Within this notebook, there are a few kind of ligand searches that it is aiming to look at.</p>
+<ul class="simple">
+<li><p>Free Versus Polymeric Ligands</p></li>
+<li><p>Ligands of Interest</p></li>
+<li><p>Ligand Binding Affinity</p></li>
+<li><p>Structure-Ligand Complexes</p></li>
+</ul>
+<p>With each of these query types, there are some different parameters which help you create the search you are interested in. Many of the searches would allow for you to search for practically everything but the code comments will provide a more clear indication of whether you can input any value or what the parameters of the value actually are.</p>
+<p>This notebook has a variety of input variables and each of these will be explained in the step of the notebook they are relevant to. The output of this notebook will be a list of all possible PDB files that fill your search parameters, and then these can be further explored using libraries such as pandas to create data frames and analyze this data.</p>
+<p>Steps:</p>
+<ol class="arabic simple">
+<li><p>Step 1 - Installing libraries and importing them into the notebook</p></li>
+<li><p>Step 2 - Introducing the Searches</p></li>
+<li><p>Step 3 - Free versus Polymeric Ligands</p></li>
+<li><p>Step 4 - Ligands of Interest</p></li>
+<li><p>Step 5 - Ligand Binding Affinity</p></li>
+<li><p>Step 6 - Structure-Ligand Complexes</p></li>
+<li><p>Step 7 - Next Steps and Combining the Searches</p></li>
+</ol>
+<section id="questions">
+<h3>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>How can you utilize code with Jupyter notebooks to more effectively run advanced searches in the PDB?</p></li>
+<li><p>How can you focus PDB advanced searches on ligand related queries?</p></li>
+<li><p>How you can use example searches as models for other specific queries?</p></li>
+</ol>
+</section>
+<section id="learning-objectives">
+<h3>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h3>
+<p>This note book aims to teach people how to utilize Python to create advanced searches in the PDB focusing around ligands.</p>
+</section>
+<section id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h3>
+<p>This notebook is designed to utilize Python to facilitate PDB advanced searches forcusing on ligand related interests.</p>
+</section>
+</section>
+<section id="notebook-contents">
+<h2>Notebook Contents<a class="headerlink" href="#notebook-contents" title="Permalink to this heading">#</a></h2>
+<p>For <strong>novice and intermediate coders</strong>, the code is divided into sequential coding cells that each perform one step in the process. This notebook includes the following steps:</p>
+<p>For <strong>Experienced coders</strong> you can take the different search types and use them in the environment that is most preferred.</p>
+<ol class="arabic simple">
+<li><p>Step 1 - Installing libraries and importing them into the notebook</p></li>
+<li><p>Step 2 - Introducing the Searches</p></li>
+<li><p>Step 3 - Free versus Polymeric Ligands</p></li>
+<li><p>Step 4 - Ligands of Interest</p></li>
+<li><p>Step 5 - Ligand Binding Affinity</p></li>
+<li><p>Step 6 - Structure-Ligand Complexes</p></li>
+<li><p>Step 7 - Next Steps and Combining the Searches</p></li>
+</ol>
+</section>
+<section id="libraries">
+<h2>Libraries<a class="headerlink" href="#libraries" title="Permalink to this heading">#</a></h2>
+<p>A list of libraries that will need to be installed and imported to complete the tasks in the notebook.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Library</p></th>
+<th class="head"><p>Abbreviation</p></th>
+<th class="head text-left"><p>Contents</p></th>
+<th class="head text-left"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>json</p></td>
+<td><p>N/A</p></td>
+<td class="text-left"><p>library for working with JavaScript Object Notation for data interchange</p></td>
+<td class="text-left"><p><a class="reference external" href="https://docs.python.org/3/library/json.html">json — JSON encoder and decoder</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>rcsbsearchapi</p></td>
+<td><p>N/A</p></td>
+<td class="text-left"><p>library for automated searching of the <a class="reference external" href="https://www.rcsb.org">RCSB Protein Data Bank</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/rcsb/py-rcsbsearchapi">py-rcsbsearchapi on GitHub</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>rcsbattributes</p></td>
+<td><p>attrs</p></td>
+<td class="text-left"><p>sublibrary from rcsbsearchapi to specifically make <em>insert here</em> searches from the PDB</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>AttributeQuery</p></td>
+<td><p>Attr</p></td>
+<td class="text-left"><p>sublibrary from rcsbsearchapi to specifically make <em>insert here</em> seraches from the PDB</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>pandas</p></td>
+<td><p>pd</p></td>
+<td class="text-left"><p>library to to manipulate data <em>insert links here</em></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
+<p>These libraries will need to be installed in your computing environment to perform the tasks in this notebook.</p>
+<p>To install from the command line on your computer, use this command (with the <code class="docutils literal notranslate"><span class="pre">json</span></code> library as the example):</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">json</span></code></p>
+<p>To install from within a Jupyter notebook or CoLab notebook, you need to type the same command in a coding cell, preceded by an exclamation point.</p>
+<p><code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">json</span></code></p>
+<p>These libraries will be imported as they are needed over the course of this notebook.</p>
+<section id="novice-and-intermediate-coders">
+<h3>Novice and Intermediate Coders<a class="headerlink" href="#novice-and-intermediate-coders" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stepwise code for NOVICE and INTERMEDIATE CODERS</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>json
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>rcsbsearchapi
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas
+<span class="c1"># These code lines are going to install the corresponding libraries onto your computer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importing the libraries with abbreviations</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">rcsbsearchapi</span>
+<span class="c1">#from rcsbsearchapi import rcsb_attributes as attrs</span>
+<span class="kn">from</span> <span class="nn">rcsbsearchapi.search</span> <span class="kn">import</span> <span class="n">AttributeQuery</span><span class="p">,</span> <span class="n">Attr</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1"># These code lines are important to utilize the libraries within this notebook as well as define certain abbreviations further down</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="experienced-coders">
+<h3>Experienced Coders<a class="headerlink" href="#experienced-coders" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Full block of raw code for EXPERIENCED CODERS</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">rcsbsearchapi</span>
+<span class="c1">#from rcsbsearchapi import rcsb_attributes as attrs</span>
+<span class="kn">from</span> <span class="nn">rcsbsearchapi.search</span> <span class="kn">import</span> <span class="n">AttributeQuery</span><span class="p">,</span> <span class="n">Attr</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="introducing-the-searches">
+<h2>Introducing the Searches<a class="headerlink" href="#introducing-the-searches" title="Permalink to this heading">#</a></h2>
+<p>In the introduction to this notebook, the different ligand searches were introduced. As a reminder, here are the different search types that this notebook encompasses:</p>
+<ul class="simple">
+<li><p>Free Versus Polymeric Ligands</p></li>
+<li><p>Ligands of Interest</p></li>
+<li><p>Ligand Binding Affinity</p></li>
+<li><p>Structure-Ligand Complexes</p></li>
+</ul>
+<p>With each of these searches, there will be different values you are focusing on. As a brief overview of each of these searches -</p>
+<section id="free-versus-polymeric-ligands">
+<h3>Free Versus Polymeric Ligands<a class="headerlink" href="#free-versus-polymeric-ligands" title="Permalink to this heading">#</a></h3>
+<p>This search will be looking at covalent or non-covalent linkage between chemical components and molecules uploaded to the PDB. In this search you will introduce an input and linkage-type, and recieve an output of all of the PDB files that include that chemical-component that is linked under the parameters.</p>
+</section>
+<section id="ligands-of-interest">
+<h3>Ligands of Interest<a class="headerlink" href="#ligands-of-interest" title="Permalink to this heading">#</a></h3>
+<p>This search is focusing on PDB files that have specific ligands as the focus on the research or upload. With this query, you can search for any ligand, and use it to find specific files that include this ligand.</p>
+</section>
+<section id="ligand-binding-affinity">
+<h3>Ligand Binding Affinity<a class="headerlink" href="#ligand-binding-affinity" title="Permalink to this heading">#</a></h3>
+<p>This search allows you to find a variety of molecules that have certain values associated with different binding affinity types. In the information for this search, it will more effectively break down what this looks like, but this search has a lot of different options to allow for a very specific output.</p>
+</section>
+<section id="structure-ligand-complexes">
+<h3>Structure-Ligand Complexes<a class="headerlink" href="#structure-ligand-complexes" title="Permalink to this heading">#</a></h3>
+<p>This search will look for complexes with a specific ligand or just broadly. With this search, there are a lot of potential paramters to adjust depending on whether you are looking for nucleic acid material or want to omit it. The search information will break down more what this can look for.</p>
+</section>
+</section>
+<section id="id1">
+<h2>Free Versus Polymeric Ligands<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>This search will be looking at covalent or non-covalent linkage between chemical components and molecules uploaded to the PDB. In this search you will introduce an input and linkage-type, and recieve an output of all of the PDB files that include that chemical-component that is linked under the parameters.</p>
+<p>In this search you have two big inputs:</p>
+<p><em>chemical_component</em> - which can be any chemical you are interested in examining linkage with</p>
+<p><em>linkage type</em> - which has two options - either “HAS_NO_COVALENT_LINKAGE” or “HAS_COVALENT_LINKAGE” in that exact search depending on what you are looking for.</p>
+<p>Once you determine what you want your input values to be, you can run the code block to gather your outputs.
+With these outputs, you can walk through the second half of the code and determine what you are hoping to see with your output and adjust this by either adding pound symbols before a line of code or removing them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chemical_component</span> <span class="o">=</span> <span class="s2">&quot;ATP&quot;</span>
+<span class="c1"># this is going to be the chemical component that you are searching for linkage with</span>
+<span class="c1"># hypothetically, you could put any chemical component here - it&#39;s really just a question of whether there will be any results</span>
+
+<span class="n">linkage_type</span> <span class="o">=</span> <span class="s2">&quot;HAS_NO_COVALENT_LINKAGE&quot;</span>
+<span class="c1"># this is the linkage type</span>
+<span class="c1"># the only two options here are &quot;HAS_NO_COVALENT LINKAGE&quot; or &quot;HAS_COVALENT_LINKAGE&quot; </span>
+
+<span class="n">q1_1</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span> <span class="o">=</span> <span class="s2">&quot;rcsb_nonpolymer_instance_annotation.comp_id&quot;</span><span class="p">,</span> <span class="n">operator</span> <span class="o">=</span> <span class="s2">&quot;exact_match&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">chemical_component</span><span class="p">)</span>
+<span class="c1"># search for the chemical component</span>
+
+<span class="n">q1_2</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span> <span class="o">=</span> <span class="s2">&quot;rcsb_nonpolymer_instance_annotation.type&quot;</span><span class="p">,</span> <span class="n">operator</span> <span class="o">=</span> <span class="s2">&quot;exact_match&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">linkage_type</span><span class="p">)</span>
+<span class="c1"># search for the linkage type</span>
+
+<span class="n">linkedligandquery</span> <span class="o">=</span> <span class="n">q1_1</span> <span class="o">&amp;</span> <span class="n">q1_2</span>
+<span class="c1"># this statement combines the previous queries to create the search of both the chemical component AND the linkage type</span>
+<span class="n">linkedligandqueryresult</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">linkedligandquery</span><span class="p">())</span>
+<span class="c1"># this statement combines the results of the query into a list</span>
+
+<span class="c1">##print(linkedligandqueryresult[1:10])</span>
+<span class="c1"># to use this statement, remove the two pound symbols</span>
+<span class="c1"># the statement will take the results list and show the PDB structure titles of the first 10 results</span>
+<span class="c1"># by changing the 10 to another number, you can see the first however many number of results you would like</span>
+
+<span class="c1">##print(len(linkedligandqueryresult))</span>
+<span class="c1"># to use this statement, remove the two pound symbols</span>
+<span class="c1"># this statement will show the number of results within the query parameters</span>
+
+<span class="c1">###*note to victoria -- add more possible things to DO with the results*</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ligand-of-interest-loi">
+<h2>Ligand of Interest (LOI)<a class="headerlink" href="#ligand-of-interest-loi" title="Permalink to this heading">#</a></h2>
+<p>This search is focusing on PDB files that have specific ligands as the focus on the research or upload. With this query, you can search for any ligand, and use it to find specific files that include this ligand.</p>
+<p>In this search you will have one main input:</p>
+<p><em>ligand_of_interest</em> - which can contain any specific ligand you are looking for</p>
+<p>In addition, if you are interested in finding all files that include a ligand of interest (more likely to be of use later), you can utilize the alternate q3_1 query through adding and removing pound signs.</p>
+<p>Once you determine what you want your input values to be, you can run the code block to gather your outputs. With these outputs, you can walk through the second half of the code and determine what you are hoping to see with your output and adjust this by either adding pound symbols before a line of code or removing them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ligand_of_interest</span> <span class="o">=</span> <span class="s2">&quot;BEZ&quot;</span>
+<span class="c1"># variable you would change if you are looking for a specific ligand</span>
+<span class="c1"># as far as i&#39;m aware this can be anything but i have not pushed the boundaries of it</span>
+
+<span class="n">q3_1</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span> <span class="o">=</span> <span class="s2">&quot;rcsb_nonpolymer_entity_annotation.comp_id&quot;</span><span class="p">,</span> <span class="n">operator</span> <span class="o">=</span> <span class="s2">&quot;exact_match&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ligand_of_interest</span><span class="p">)</span>
+<span class="c1"># searches for the ligand of interest</span>
+<span class="c1"># if you are interested in finding all ligands that are of interest you can use slightly different syntax</span>
+<span class="c1"># here is the alternate query for that:</span>
+<span class="c1">##q3_1 = AttributeQuery(attribute = &quot;rcsb_nonpolymer_entity_annotation.comp_id&quot;, operator = &quot;exists&quot;)</span>
+<span class="c1"># if you use that line, you need to comment out the query above - this can be done by adding a pound symbol</span>
+
+<span class="n">q3_2</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span> <span class="o">=</span> <span class="s2">&quot;rcsb_nonpolymer_entity_annotation.type&quot;</span><span class="p">,</span> <span class="n">operator</span> <span class="o">=</span> <span class="s2">&quot;exact_match&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;SUBJECT_OF_INVESTIGATION&quot;</span><span class="p">)</span>
+<span class="c1"># specific search for where the ligand of interest was the subject of the paper or why it was put in the PDB</span>
+
+<span class="n">ligandofinterestquery</span> <span class="o">=</span> <span class="n">q3_1</span> <span class="o">&amp;</span> <span class="n">q3_2</span>
+<span class="c1"># combines the previous query lines to ensure you can effectively search for the specific ligands</span>
+
+<span class="n">ligandofinterestresult</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ligandofinterestquery</span><span class="p">())</span>
+<span class="c1"># combines the results of the query into a list</span>
+
+<span class="c1">##print(ligandofinterestresult[1:10])</span>
+<span class="c1"># to use this statement, remove the two pound symbols</span>
+<span class="c1"># the statement will take the results list and show the PDB structure titles of the first 10 results</span>
+<span class="c1"># by changing the 10 to another number, you can see the first however many number of results you would like</span>
+
+<span class="c1">##print(len(ligandofinterestresult))</span>
+<span class="c1"># to use this statement, remove the two pound symbols</span>
+<span class="c1"># this statement will show the number of results within the query parameters</span>
+
+<span class="c1">###*note to victoria -- add more possible things to DO with the results*</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Ligand Binding Affinity<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>This search allows you to find a variety of molecules that have certain values associated with different binding affinity types.</p>
+<p>In this search you have a few input values:</p>
+<p><em>affinity_value</em> - which is any number you are looking for searching the affinity type with, and while there are limitations, you can try any number here or utilize the PDB website to understand what the exact limitations are</p>
+<p><em>affinity_type</em> - here you have the kind of binding affinity you are interested in</p>
+<p>This has very specific possible inputs as outlined below:</p>
+<ol class="arabic simple">
+<li><p>“EC50” - the concentration of the compound that generates a half-maximal response in nM</p></li>
+<li><p>“IC50” - the concentration of ligand that reduces enzymatic activity by 50% in nM</p></li>
+<li><p>“Kd” - the dissociation constant in nM</p></li>
+<li><p>“Ki” - enzyme inhibition constant in nM</p></li>
+<li><p>“Ka” - the association constant in M^-1</p></li>
+<li><p>“ΔG” - Gibbs free energy of binding (for association reaction) in Kj/mol</p></li>
+<li><p>“ΔH” - change in enthalpy associated with a chemical reaction in Kj/mol</p></li>
+<li><p>“-TΔS” - change in entropy associated with a chemical reaction in Kj/mol</p></li>
+</ol>
+<p>With each of these, they are particularly case sensitive so be sure that you use the exact capitalization and description as in the quotations.</p>
+<p>This block will go further than the previous blocks. Once you determine you affinity type and value, you can then also determine what the metric is via equals statements, or greater, less, etc. This is outlined by changing the operator in the lines of code, and the comments contain the specific syntax to use here</p>
+<p>Once you determine all of your parameters, you can run the code block to gather your outputs. With these outputs, you can walk through the second half of the code and determine what you are hoping to see with your output and adjust this by either adding pound symbols before a line of code or removing them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">affinity_value</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="c1"># value that you are searching for the binding affinity with</span>
+<span class="c1"># this can functionally be changed to any number HOWEVER many of the types of affinity searches will have specific ranges of probable outcomes</span>
+<span class="c1"># this can also be a negative value or include values with e in them</span>
+
+<span class="n">affinity_type</span> <span class="o">=</span> <span class="s2">&quot;EC50&quot;</span>
+<span class="c1"># determines the kind of binding affinity you are looking for</span>
+<span class="c1"># this data comes from the other databases that are measuring binding affinity</span>
+<span class="c1">### *note to victoria - CITE these databases and explain them</span>
+
+<span class="c1"># Here are the following options for affinity type searches - to use them replace the current measurement in the line of code with one of the others</span>
+
+<span class="c1"># &quot;EC50&quot; - the concentration of the compound that generates a half-maximal response</span>
+<span class="c1"># &quot;IC50&quot; - the concentration of ligand that reduces enzymatic activity by 50%</span>
+<span class="c1"># &quot;Kd&quot; - the dissociation constant</span>
+<span class="c1"># &quot;Ki&quot; - enzyme inhibition constant</span>
+<span class="c1"># these are in nM</span>
+
+<span class="c1"># &quot;Ka&quot; - the association constant</span>
+<span class="c1"># this in M^-1</span>
+
+<span class="c1"># &quot;&amp;Delta;G&quot; - Gibbs free energy of binding (for association reaction)</span>
+<span class="c1"># &quot;&amp;Delta;H&quot; - change in enthalpy associated with a chemical reaction</span>
+<span class="c1"># &quot;-T&amp;Delta;S&quot; - change in entropy associated with a chemical reaction</span>
+<span class="c1"># these are in Kj/mol</span>
+
+<span class="n">q4_1</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span> <span class="o">=</span> <span class="s2">&quot;rcsb_binding_affinity.value&quot;</span><span class="p">,</span> <span class="n">operator</span> <span class="o">=</span> <span class="s2">&quot;equals&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">affinity_value</span><span class="p">)</span>
+<span class="c1"># searches for the identified affinity value</span>
+<span class="c1"># to change this to show values that may not equal the listed value, change the operator to &quot;greater&quot;</span>
+<span class="c1"># other operator options include &quot;less&quot;, &quot;less_or_equal&quot;, &quot;greater_or_equal&quot;</span>
+
+<span class="n">q4_2</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span> <span class="o">=</span> <span class="s2">&quot;rcsb_binding_affinity.type&quot;</span><span class="p">,</span> <span class="n">operator</span> <span class="o">=</span> <span class="s2">&quot;exact_match&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">affinity_type</span><span class="p">)</span>
+<span class="c1"># searches for the kind of affinity you are looking for</span>
+
+<span class="n">bindingaffinityquery</span> <span class="o">=</span> <span class="n">q4_1</span> <span class="o">&amp;</span> <span class="n">q4_2</span>
+<span class="c1"># combines the affinity value and affinity type searches</span>
+
+<span class="n">bindingaffinityresult</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">bindingaffinityquery</span><span class="p">())</span>
+<span class="c1"># combines the results of the query into a list</span>
+
+<span class="c1">##print(bindingaffinityresult[1:10])</span>
+<span class="c1"># to use this statement, remove the two pound symbols</span>
+<span class="c1"># the statement will take the results list and show the PDB structure titles of the first 10 results</span>
+<span class="c1"># by changing the 10 to another number, you can see the first however many number of results you would like</span>
+
+<span class="c1">##print(len(bindingaffinityresult))</span>
+<span class="c1"># to use this statement, remove the two pound symbols</span>
+<span class="c1"># this statement will show the number of results within the query parameters</span>
+
+<span class="c1">###*note to victoria -- add more possible things to DO with the results*</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>Structure-Ligand Complexes<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>This search will look for complexes with a specific ligand or just broadly. With this search, there are a lot of potential paramters to adjust depending on whether you are looking for nucleic acid material or want to omit it.</p>
+<p>The first line of this code will simply just ensure you are finding things with ligands, however if you want more than one, you can change the number under the value to increase the number of ligands.</p>
+<p>In addition, you need to determine whether you want nucleic acids included in your search. Depending on whether you do or do not, you can comment in the additional code blocks.</p>
+<p>With all of these, you can easily change the operator and value to fit your specific search needs.</p>
+<p>Once you determine what you want your input values to be, you can run the code block to gather your outputs. To do this, you will need to adapt the line:</p>
+<p><em>structureligandcomplexquery = q2_1</em></p>
+<p>You can adapt this line by adding &amp; symbols and the search variables that you want to add to the query, and then you can gather the outputs</p>
+<p>With these outputs, you can walk through the second half of the code and determine what you are hoping to see with your output and adjust this by either adding pound symbols before a line of code or removing them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q2_1</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span> <span class="o">=</span> <span class="s2">&quot;rcsb_entry_info.nonpolymer_entity_count&quot;</span><span class="p">,</span> <span class="n">operator</span> <span class="o">=</span> <span class="s2">&quot;greater&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="c1"># this query is going to search for complexes with ANY ligand</span>
+<span class="c1"># if you want more than one ligand, change the value to whatever number you are interested in finding more ligands than</span>
+<span class="c1"># since that is a broad query, it will get many results but is necessary with any statements to narrow the search down</span>
+
+<span class="c1"># now that the baseline query is established, the next few query options can help narrow down what you are looking for</span>
+
+<span class="c1"># to add these lines to your query, remove the two pound symbols</span>
+
+<span class="c1">##q2_2 = AttributeQuery(attribute = &quot;rcsb_entry_info.polymer_entity_count_RNA&quot;, operator = &quot;equals&quot;, value = 0)</span>
+<span class="c1"># eliminates RNA from the search output</span>
+<span class="c1"># to change this structure to show RNA-ligand complexes, change the operator to &quot;greater&quot;</span>
+<span class="c1"># other operator options include &quot;less&quot;, &quot;less_or_equal&quot;, &quot;greater_or_equal&quot;</span>
+
+<span class="c1">##q2_3 = AttributeQuery(attribute = &quot;rcsb_entry_info.polymer_entity_count_DNA&quot;, operator = &quot;equals&quot;, value = 0)</span>
+<span class="c1"># eliminates DNA from the search output</span>
+<span class="c1"># to change this structure to show DNA-ligand complexes, change the operator to &quot;greater&quot;</span>
+
+<span class="c1">##q2_4 = AttributeQuery(attribute = &quot;rcsb_entry_info.polymer_entity_count_nucleic_acid_hybrid&quot;, operator = &quot;equals&quot;, value = 0)</span>
+<span class="c1"># eliminates nucleic-acid hybrids from the search output</span>
+<span class="c1"># to change this structure to show nucleic-acid-ligand complexes, change the operator to &quot;greater&quot;</span>
+
+<span class="c1"># these lines help cut out nucleic acid material that might have been within a protein structure</span>
+<span class="c1"># as a note, you could increase the number from zero, but ensuer the operator matches what you are looking for</span>
+
+<span class="c1"># additionally, these lines can utilize the operator &quot;range&quot; which requires the following conditions changed in the code:</span>
+<span class="c1"># the big change will come in the value statement - which will need to utilize from and to statements</span>
+<span class="c1"># shown below is an example of how to utilize this syntax:</span>
+<span class="c1">###*note to victoria - this doesn&#39;t currently function*</span>
+
+<span class="c1">#q2_range1 = AttributeQuery(attribute = &quot;rcsb_entry_info.polymer_entity_count_RNA&quot;, operator = &quot;greater_or_equal&quot;, value = 1)</span>
+<span class="c1">#q2_range2 = AttributeQuery(attribute = &quot;rcsb_entry_info.polymer_entity_count_RNA&quot;, operator = &quot;less_or_equal&quot;, value = 4)</span>
+
+<span class="c1"># furthermore, you might need lines to eliminate proteins and just examine kind of ligand</span>
+<span class="c1"># so this is where statements such as the following two lines can help you out:</span>
+<span class="c1">##q2_5 = AttributeQuery(attribute = &quot;rcsb_entry_info.polymer_entity_count_protein&quot;, operator = &quot;equals&quot;, value = 0)</span>
+<span class="c1"># you can remove the two pound symbols to activate this line of code</span>
+<span class="c1"># this line however will only work if the first line is commented out</span>
+
+<span class="c1"># however! there are options to customize these lines</span>
+<span class="c1"># in many of the PDB example queries, it combines these searches with experimental technique queries, refinement factors and, data methods to get very specific outputs</span>
+
+<span class="n">structureligandcomplexquery</span> <span class="o">=</span> <span class="n">q2_1</span> <span class="c1">#&amp; </span>
+<span class="c1"># this statement combines the previous queries to create the search of any/all characteristics</span>
+<span class="c1"># this is going to be the results statement but its not finished! right now it only includes that first statement to get ligands</span>
+<span class="c1"># once you determine what statements you want to include, add the &quot;q&quot; name to the statement with &amp; signs</span>
+
+<span class="n">structureligandcomplexresult</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">structureligandcomplexquery</span><span class="p">())</span>
+<span class="c1"># this statement combines the results of the query into a list</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">structureligandcomplexresult</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+<span class="c1"># to use this statement, remove the two pound symbols</span>
+<span class="c1"># the statement will take the results list and show the PDB structure titles of the first 10 results</span>
+<span class="c1"># by changing the 10 to another number, you can see the first however many number of results you would like</span>
+
+<span class="c1">##print(len(structureligandcomplexresult))</span>
+<span class="c1"># to use this statement, remove the two pound symbols</span>
+<span class="c1"># this statement will show the number of results within the query parameters</span>
+
+<span class="c1">###*note to victoria -- add more possible things to DO with the results*</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="next-steps-and-combining-searches">
+<h2>Next Steps and Combining Searches<a class="headerlink" href="#next-steps-and-combining-searches" title="Permalink to this heading">#</a></h2>
+<p>Now that you have a baseline for the different kinds of search parameters you can do surrounding ligands, it’s time to apply it! First and foremost, this can be done through stacking the different ligand search types.</p>
+<p>*** EXAMPLE HERE ***</p>
+<p>Furthermore, you can take these searches and add them onto other PDB advanced searches.</p>
+<p>OUTPUTS</p>
+<p>*** EXAMPLE HERE ***</p>
+<ul class="simple">
+<li><p>information about what to do with the output stuff</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Macromolecules.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Macromolecules</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-contents">Notebook Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries">Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#novice-and-intermediate-coders">Novice and Intermediate Coders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experienced-coders">Experienced Coders</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-the-searches">Introducing the Searches</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#free-versus-polymeric-ligands">Free Versus Polymeric Ligands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ligands-of-interest">Ligands of Interest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ligand-binding-affinity">Ligand Binding Affinity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-ligand-complexes">Structure-Ligand Complexes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Free Versus Polymeric Ligands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ligand-of-interest-loi">Ligand of Interest (LOI)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Ligand Binding Affinity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Structure-Ligand Complexes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps-and-combining-searches">Next Steps and Combining Searches</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1183 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Assemblies &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=2b91c5f0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Assembly_Search';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Macromolecules" href="Macromolecules.html" />
+    <link rel="prev" title="Drug Search" href="Drug_Search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Small Molecule RCSB PDB Search
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Drug_Search.html">Drug Search</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Assemblies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Macromolecules.html">Macromolecules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ligands.html">Ligand PDB Searches</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAssembly_Search.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Assembly_Search.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Assemblies</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-taken">Steps Taken</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-search">1) Creating the Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-validation-by-list">2a) Validation By List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-validation-by-file-request">2b) Validation By File Request</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-validation-by-file-download">2c) Validation By File Download</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-search-download">3) Complete Search Download</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries">Importing Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-polymers-in-biological-assembly">Total Polymers in Biological Assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a">2a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b">2b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c">2c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-protein-chain">Single Protein Chain</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identical-chains">24 Identical Chains</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#immunoglobulin-fab-fragments-to-dimeric-antigen">Immunoglobulin Fab Fragments to Dimeric Antigen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">2a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">3)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-heavy-water">One Heavy Water</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">2a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">2b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">2c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">3)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="assemblies">
+<h1>Assemblies<a class="headerlink" href="#assemblies" title="Permalink to this heading">#</a></h1>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h2>
+<p>The RCSB PDB is the repository for all publicly available experimentally determined protein structures in the world. This notebook is made in order to demonstrate and elaborate on how to use the rcsbsearchapi Python library to recreate Advanced Searches from the RCSB PDB in Python. Further, this notebook will show how to download the files of the results of these searches, also in Python. This will be done through searching particularly for different assemblies represented in the RCSB PDB, with each search demonstrating a different way of utilizing the Advanced Search tool.</p>
+</section>
+<section id="steps-taken">
+<h2>Steps Taken<a class="headerlink" href="#steps-taken" title="Permalink to this heading">#</a></h2>
+<p>The following is a step-by-step explanation of what will be performed for each code example.</p>
+<section id="creating-the-search">
+<h3>1) Creating the Search<a class="headerlink" href="#creating-the-search" title="Permalink to this heading">#</a></h3>
+<p>An explanation of what the search is describing will be followed by the creation of a RCSB PDB Search.</p>
+</section>
+<section id="a-validation-by-list">
+<h3>2a) Validation By List<a class="headerlink" href="#a-validation-by-list" title="Permalink to this heading">#</a></h3>
+<p>The search is tested for functionality by analyzing the first 10 results of the search in a list.</p>
+</section>
+<section id="b-validation-by-file-request">
+<h3>2b) Validation By File Request<a class="headerlink" href="#b-validation-by-file-request" title="Permalink to this heading">#</a></h3>
+<p>The search is tested for functionality by requesting the file of the first search result. This is the step where the results will be changed if needed for the sake of requesting and downloading their corresponding file.</p>
+</section>
+<section id="c-validation-by-file-download">
+<h3>2c) Validation By File Download<a class="headerlink" href="#c-validation-by-file-download" title="Permalink to this heading">#</a></h3>
+<p>The search is tested for functionality by downloading and reading the contents of the first search result’s file. This includes the generation of a folder for the files of the search result.</p>
+</section>
+<section id="complete-search-download">
+<h3>3) Complete Search Download<a class="headerlink" href="#complete-search-download" title="Permalink to this heading">#</a></h3>
+<p>Following validation, each file in the search result is downloaded into the previously generated file.</p>
+</section>
+</section>
+<section id="importing-libraries">
+<h2>Importing Libraries<a class="headerlink" href="#importing-libraries" title="Permalink to this heading">#</a></h2>
+<p>A list of libraries that will need to be installed and imported to complete the tasks in the notebook.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Library</p></th>
+<th class="head text-left"><p>Contents</p></th>
+<th class="head text-left"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>rcsbsearchapi</p></td>
+<td class="text-left"><p>library for automated searching of the <a class="reference external" href="https://www.rcsb.org">RCSB Protein Data Bank</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/rcsb/py-rcsbsearchapi">py-rcsbsearchapi on GitHub</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>requests</p></td>
+<td class="text-left"><p>library for sending HTTP requests</p></td>
+<td class="text-left"><p><a class="reference external" href="https://requests.readthedocs.io/en/latest/">requests Documentation</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>os</p></td>
+<td class="text-left"><p>standard library for creating directories</p></td>
+<td class="text-left"><p><a class="reference external" href="https://docs.python.org/3/library/os.html">os Documentation</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
+<p>These libraries will need to be installed in your computing environment to perform the tasks in this notebook.</p>
+<p>To install from the command line on your computer, use this command (with the <code class="docutils literal notranslate"><span class="pre">requests</span></code> library as the example):</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">requests</span></code></p>
+<p>To install from within a Jupyter notebook or CoLab notebook, you need to type the same command in a coding cell, preceded by an exclamation point.</p>
+<p><code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">requests</span></code></p>
+<p>These libraries will be imported as they are needed over the course of this notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the components of rcsbsearchapi needed for this search</span>
+<span class="kn">from</span> <span class="nn">rcsbsearchapi</span> <span class="kn">import</span> <span class="n">rcsb_attributes</span> <span class="k">as</span> <span class="n">attrs</span>
+<span class="c1"># For Operator notation</span>
+
+<span class="kn">from</span> <span class="nn">rcsbsearchapi.const</span> <span class="kn">import</span> <span class="n">CHEMICAL_ATTRIBUTE_SEARCH_SERVICE</span><span class="p">,</span> <span class="n">STRUCTURE_ATTRIBUTE_SEARCH_SERVICE</span>
+<span class="kn">from</span> <span class="nn">rcsbsearchapi.search</span> <span class="kn">import</span> <span class="n">AttributeQuery</span><span class="p">,</span> <span class="n">Attr</span><span class="p">,</span> <span class="n">TextQuery</span><span class="p">,</span> <span class="n">StructSimilarityQuery</span>
+<span class="c1"># For Fluent notation</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>  <span class="c1"># to enable us to pull files from the PDB</span>
+<span class="kn">import</span> <span class="nn">os</span>        <span class="c1"># to enable us to create a directory to store the files</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="total-polymers-in-biological-assembly">
+<h2>Total Polymers in Biological Assembly<a class="headerlink" href="#total-polymers-in-biological-assembly" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3>1)<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>The following code is a recreation of the search example on the RCSB Protein Data Bank shown <a class="reference external" href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22operator%22%3A%22equals%22%2C%22negation%22%3Afalse%2C%22value%22%3A12%2C%22attribute%22%3A%22rcsb_assembly_info.polymer_entity_instance_count%22%7D%7D%5D%7D%5D%2C%22label%22%3A%22text%22%7D%5D%2C%22label%22%3A%22query-builder%22%7D%2C%22return_type%22%3A%22assembly%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A100%7D%2C%22scoring_strategy%22%3A%22combined%22%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%22c8e2869a9b79b9d79d3955b5c9009713%22%7D%7D">here</a> which is a search of the total polymers in biological assembly. This search can be divided into 1 attribute:</p>
+<p>Number of polymers: 12</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q1</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span><span class="o">=</span><span class="s2">&quot;rcsb_assembly_info.polymer_entity_instance_count&quot;</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;equals&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">result_polymers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">q1</span><span class="p">(</span><span class="s2">&quot;assembly&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="a">
+<h3>2a)<a class="headerlink" href="#a" title="Permalink to this heading">#</a></h3>
+<p>We can check to make sure the list has been successfully created by printing the first 10 elements of the list. These 10 elements should be the same first ten elements seen on the RCSB RDB search.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The following drugs are among the </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">)</span><span class="si">}</span><span class="s2"> polymers in biological assembly:&quot;</span><span class="p">,</span> <span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="b">
+<h3>2b)<a class="headerlink" href="#b" title="Permalink to this heading">#</a></h3>
+<p>Now, we can begin downloading the files from the list we made. First, download this element in the list and then check to see if it was downloaded successfully. Then, open the file to see if its contents and in line with what is expected from the download.</p>
+<p>Additionally, because our search gives results that aren’t perfectly aligned with their corresponding file’s name, we need to truncate the name to match the file name.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">):</span>
+    <span class="n">result_polymers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">result_polymers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">test_validation</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;https://files.rcsb.org/download/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">.cif&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_validation</span><span class="o">.</span><span class="n">status_code</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="c">
+<h3>2c)<a class="headerlink" href="#c" title="Permalink to this heading">#</a></h3>
+<p>To further check, we can create a file and then read the contents of the file. Creating the file includes the creation of a directory (folder) in order to store the folder, which will be called ligands.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;assemblies/Biological_Assembly&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;assemblies/Biological_Assembly/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.cif&quot;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">test_validation</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;assemblies/Biological_Assembly/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.cif&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">file_text</span> <span class="o">=</span> <span class="n">file1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">file_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3>3)<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Once you’ve confirmed that the file download occurred correctly, we can finish by downloading all of the files from the list we made previously into the folder we generated. The following block of code will perform this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">baseUrl</span> <span class="o">=</span> <span class="s2">&quot;https://files.rcsb.org/download/&quot;</span>
+
+<span class="k">for</span> <span class="n">ChemID</span> <span class="ow">in</span> <span class="n">result_polymers</span><span class="p">:</span>
+    <span class="n">cFile</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ChemID</span><span class="si">}</span><span class="s2">.cif&quot;</span>
+    <span class="n">cFileUrl</span> <span class="o">=</span> <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">cFile</span>
+    <span class="n">cFileLocal</span> <span class="o">=</span> <span class="s2">&quot;assemblies/Biological_Assembly/&quot;</span> <span class="o">+</span> <span class="n">cFile</span> <span class="c1">#Do we need to make a local file, or is it expected they will fill in the code? </span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cFileUrl</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cFileLocal</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="single-protein-chain">
+<h2>Single Protein Chain<a class="headerlink" href="#single-protein-chain" title="Permalink to this heading">#</a></h2>
+<section id="id3">
+<h3>1)<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>The following code is a recreation of the search example on the RCSB Protein Data Bank shown <a class="reference external" href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22operator%22%3A%22equals%22%2C%22negation%22%3Afalse%2C%22value%22%3A1%2C%22attribute%22%3A%22rcsb_assembly_info.polymer_entity_instance_count%22%7D%7D%2C%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22operator%22%3A%22equals%22%2C%22negation%22%3Afalse%2C%22value%22%3A1%2C%22attribute%22%3A%22rcsb_assembly_info.polymer_entity_instance_count_protein%22%7D%7D%2C%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22operator%22%3A%22range%22%2C%22negation%22%3Afalse%2C%22value%22%3A%7B%22from%22%3A350%2C%22to%22%3A400%2C%22include_lower%22%3Atrue%2C%22include_upper%22%3Atrue%7D%2C%22attribute%22%3A%22rcsb_assembly_info.polymer_monomer_count%22%7D%7D%5D%7D%5D%2C%22label%22%3A%22text%22%7D%5D%2C%22label%22%3A%22query-builder%22%7D%2C%22return_type%22%3A%22assembly%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A100%7D%2C%22scoring_strategy%22%3A%22combined%22%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%221c00017375f2a0562f492bb208ab74df%22%7D%7D">here</a> which is a search of biological assemblies that have a single protein chain with 350-400 residues. This search can be divided into 3 attributes:</p>
+<p>Single chain
+Chain is a protein chain
+350 - 400 residues</p>
+<p>The following code creates these three attributes, combines them into one ‘query’, then places the result in a list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q1</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span><span class="o">=</span><span class="s2">&quot;rcsb_assembly_info.polymer_entity_instance_count&quot;</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;equals&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">q2</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span><span class="o">=</span><span class="s2">&quot;rcsb_assembly_info.polymer_entity_instance_count_protein&quot;</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;equals&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">q3_1</span> <span class="o">=</span> <span class="n">attrs</span><span class="o">.</span><span class="n">rcsb_assembly_info</span><span class="o">.</span><span class="n">polymer_monomer_count</span> <span class="o">&gt;=</span> <span class="mi">350</span>
+<span class="n">q3_2</span> <span class="o">=</span> <span class="n">attrs</span><span class="o">.</span><span class="n">rcsb_assembly_info</span><span class="o">.</span><span class="n">polymer_monomer_count</span> <span class="o">&lt;=</span> <span class="mi">400</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="n">q1</span> <span class="o">&amp;</span> <span class="n">q2</span> <span class="o">&amp;</span> <span class="n">q3_1</span> <span class="o">&amp;</span> <span class="n">q3_2</span>
+<span class="n">result_polymers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;assembly&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h3>2a)<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>We can check to make sure the list has been successfully created by printing the first 10 elements of the list. These 10 elements should be the same first ten elements seen on the RCSB RDB search.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The following drugs are among the </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">)</span><span class="si">}</span><span class="s2"> polymers with a single protein chain:&quot;</span><span class="p">,</span> <span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h3>2b)<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>Now, we can begin downloading the files from the list we made. First, download this element in the list and then check to see if it was downloaded successfully. Then, open the file to see if its contents and in line with what is expected from the download.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">):</span>
+    <span class="n">result_polymers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">result_polymers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">test_validation</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;https://files.rcsb.org/download/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">.cif&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_validation</span><span class="o">.</span><span class="n">status_code</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id6">
+<h3>2c)<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>To further check, we can create a file and then read the contents of the file. Creating the file includes the creation of a directory (folder) in order to store the folder, which will be called ligands.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;assemblies/Single_Protein_Chain&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;assemblies/Single_Protein_Chain/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.cif&quot;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">test_validation</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;assemblies/Single_Protein_Chain/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.cif&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">file_text</span> <span class="o">=</span> <span class="n">file1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">file_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id7">
+<h3>3)<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>Once you’ve confirmed that the file download occurred correctly, we can finish by downloading all of the files from the list we made previously into the folder we generated. The following block of code will perform this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">baseUrl</span> <span class="o">=</span> <span class="s2">&quot;https://files.rcsb.org/download/&quot;</span>
+
+<span class="k">for</span> <span class="n">ChemID</span> <span class="ow">in</span> <span class="n">result_polymers</span><span class="p">:</span>
+    <span class="n">cFile</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ChemID</span><span class="si">}</span><span class="s2">.cif&quot;</span>
+    <span class="n">cFileUrl</span> <span class="o">=</span> <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">cFile</span>
+    <span class="n">cFileLocal</span> <span class="o">=</span> <span class="s2">&quot;assemblies/Biological_Assembly/&quot;</span> <span class="o">+</span> <span class="n">cFile</span> <span class="c1">#Do we need to make a local file, or is it expected they will fill in the code? </span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cFileUrl</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cFileLocal</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="identical-chains">
+<h2>24 Identical Chains<a class="headerlink" href="#identical-chains" title="Permalink to this heading">#</a></h2>
+<section id="id8">
+<h3>1)<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>The following code is a recreation of the search example on the RCSB Protein Data Bank shown <a class="reference external" href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22operator%22%3A%22exact_match%22%2C%22negation%22%3Afalse%2C%22value%22%3A%22Homo%2024-mer%22%2C%22attribute%22%3A%22rcsb_struct_symmetry.oligomeric_state%22%7D%7D%5D%7D%5D%2C%22label%22%3A%22text%22%7D%5D%2C%22label%22%3A%22query-builder%22%7D%2C%22return_type%22%3A%22assembly%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A100%7D%2C%22scoring_strategy%22%3A%22combined%22%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%229c66f6bfea1407cc71d25812786a9dc1%22%7D%7D">here</a> which is a search of biological assemblies that have 24 identical chains. This search can be divided into 1 attribute:</p>
+<p>24 identical chains</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q1</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span><span class="o">=</span><span class="s2">&quot;rcsb_struct_symmetry.oligomeric_state&quot;</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;exact_match&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Homo 24-mer&quot;</span><span class="p">)</span>
+
+<span class="n">result_polymers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">q1</span><span class="p">(</span><span class="s2">&quot;assembly&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h3>2a)<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<p>We can check to make sure the list has been successfully created by printing the first 10 elements of the list. These 10 elements should be the same first ten elements seen on the RCSB RDB search.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The following drugs are among the </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">)</span><span class="si">}</span><span class="s2"> polymers that contain exactly 24 identical chains:&quot;</span><span class="p">,</span> <span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id10">
+<h3>2b)<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<p>Now, we can begin downloading the files from the list we made. First, download this element in the list and then check to see if it was downloaded successfully. Then, open the file to see if its contents and in line with what is expected from the download.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">):</span>
+    <span class="n">result_polymers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">result_polymers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">test_validation</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;https://files.rcsb.org/download/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">.cif&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_validation</span><span class="o">.</span><span class="n">status_code</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id11">
+<h3>2c)<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<p>To further check, we can create a file and then read the contents of the file. Creating the file includes the creation of a directory (folder) in order to store the folder, which will be called ligands.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;assemblies/24_Identical_Chains&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;assemblies/24_Identical_Chains/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.cif&quot;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">test_validation</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;assemblies/24_Identical_Chains/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.cif&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">file_text</span> <span class="o">=</span> <span class="n">file1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">file_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id12">
+<h3>3)<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<p>Once you’ve confirmed that the file download occurred correctly, we can finish by downloading all of the files from the list we made previously into the folder we generated. The following block of code will perform this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">baseUrl</span> <span class="o">=</span> <span class="s2">&quot;https://files.rcsb.org/download/&quot;</span>
+
+<span class="k">for</span> <span class="n">ChemID</span> <span class="ow">in</span> <span class="n">result_polymers</span><span class="p">:</span>
+    <span class="n">cFile</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ChemID</span><span class="si">}</span><span class="s2">.cif&quot;</span>
+    <span class="n">cFileUrl</span> <span class="o">=</span> <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">cFile</span>
+    <span class="n">cFileLocal</span> <span class="o">=</span> <span class="s2">&quot;assemblies/24_Identical_Chains/&quot;</span> <span class="o">+</span> <span class="n">cFile</span> <span class="c1">#Do we need to make a local file, or is it expected they will fill in the code? </span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cFileUrl</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cFileLocal</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="immunoglobulin-fab-fragments-to-dimeric-antigen">
+<h2>Immunoglobulin Fab Fragments to Dimeric Antigen<a class="headerlink" href="#immunoglobulin-fab-fragments-to-dimeric-antigen" title="Permalink to this heading">#</a></h2>
+<section id="id13">
+<h3>1)<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<p>The following code is a recreation of the search example on the RCSB Protein Data Bank shown <a class="reference external" href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_entry_info.polymer_entity_count_protein%22%2C%22operator%22%3A%22equals%22%2C%22negation%22%3Afalse%2C%22value%22%3A3%7D%7D%2C%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_assembly_info.polymer_entity_instance_count%22%2C%22operator%22%3A%22equals%22%2C%22negation%22%3Afalse%2C%22value%22%3A6%7D%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%5D%2C%22label%22%3A%22text%22%7D%2C%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22structure%22%2C%22parameters%22%3A%7B%22operator%22%3A%22strict_shape_match%22%2C%22value%22%3A%7B%22entry_id%22%3A%221BJ1%22%2C%22asym_id%22%3A%22A%22%7D%7D%7D%5D%7D%2C%22return_type%22%3A%22entry%22%2C%22request_info%22%3A%7B%22query_id%22%3A%228248067268094d3dfb85da133bd86681%22%7D%2C%22request_options%22%3A%7B%22scoring_strategy%22%3A%22combined%22%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A25%7D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%7D%7D">here</a> which is a search of immunoglobin Fab fragments bound to a dimeric antigen. This search can be divided into 3 attributes:</p>
+<p>6 polymer entity instances (2 Fab heavy chains, 2 Fab light chains, 2 antigen chains)
+3 polymer entities (Fab heavy chain, Fab light chain, antigen chain)
+Structure similarity to 1bj1, chain A</p>
+<p>The following code creates these three attributes, combines them into one ‘query’, then places the result in a list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q1</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span><span class="o">=</span><span class="s2">&quot;rcsb_assembly_info.polymer_entity_instance_count&quot;</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;equals&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="n">q2</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span><span class="o">=</span><span class="s2">&quot;rcsb_entry_info.polymer_entity_count_protein&quot;</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;equals&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">q3</span> <span class="o">=</span> <span class="n">StructSimilarityQuery</span><span class="p">(</span><span class="n">entry_id</span> <span class="o">=</span> <span class="s2">&quot;1BJ1&quot;</span><span class="p">,</span> <span class="n">structure_input_type</span><span class="o">=</span><span class="s2">&quot;chain_id&quot;</span><span class="p">,</span> <span class="n">chain_id</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">target_search_space</span><span class="o">=</span><span class="s2">&quot;polymer_entity_instance&quot;</span><span class="p">)</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="n">q1</span> <span class="o">&amp;</span> <span class="n">q2</span> <span class="o">&amp;</span> <span class="n">q3</span> 
+<span class="n">result_polymers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;entry&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id14">
+<h3>2a)<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<p>We can check to make sure the list has been successfully created by printing the first 10 elements of the list. These 10 elements should be the same first ten elements seen on the RCSB RDB search.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The following drugs are among the </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">)</span><span class="si">}</span><span class="s2"> polymers immunoglobulin fab fragments connected to dimeric antigen:&quot;</span><span class="p">,</span> <span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id15">
+<h3>2b)<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<p>Now, we can begin downloading the files from the list we made. First, download this element in the list and then check to see if it was downloaded successfully. Then, open the file to see if its contents and in line with what is expected from the download.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_validation</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;https://files.rcsb.org/download/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">.cif&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_validation</span><span class="o">.</span><span class="n">status_code</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id16">
+<h3>2c)<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<p>To further check, we can create a file and then read the contents of the file. Creating the file includes the creation of a directory (folder) in order to store the folder, which will be called ligands.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;assemblies/Immunoglobin_Fab&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;assemblies/Immunoglobin_Fab/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.cif&quot;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">test_validation</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;assemblies/Immunoglobin_Fab/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.cif&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">file_text</span> <span class="o">=</span> <span class="n">file1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">file_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id17">
+<h3>3)<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<p>Once you’ve confirmed that the file download occurred correctly, we can finish by downloading all of the files from the list we made previously into the folder we generated. The following block of code will perform this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">baseUrl</span> <span class="o">=</span> <span class="s2">&quot;https://files.rcsb.org/download/&quot;</span>
+
+<span class="k">for</span> <span class="n">ChemID</span> <span class="ow">in</span> <span class="n">result_polymers</span><span class="p">:</span>
+    <span class="n">cFile</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ChemID</span><span class="si">}</span><span class="s2">.cif&quot;</span>
+    <span class="n">cFileUrl</span> <span class="o">=</span> <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">cFile</span>
+    <span class="n">cFileLocal</span> <span class="o">=</span> <span class="s2">&quot;assemblies/Immunoglobin_Fab/&quot;</span> <span class="o">+</span> <span class="n">cFile</span> <span class="c1">#Do we need to make a local file, or is it expected they will fill in the code? </span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cFileUrl</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cFileLocal</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="one-heavy-water">
+<h2>One Heavy Water<a class="headerlink" href="#one-heavy-water" title="Permalink to this heading">#</a></h2>
+<section id="id18">
+<h3>1)<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<p>The following code is a recreation of the search example on the RCSB Protein Data Bank shown <a class="reference external" href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22logical_operator%22%3A%22and%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_assembly_info.deuterated_water_count%22%2C%22operator%22%3A%22greater_or_equal%22%2C%22negation%22%3Afalse%2C%22value%22%3A1%7D%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%5D%2C%22label%22%3A%22text%22%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%2C%22return_type%22%3A%22assembly%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A25%7D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22scoring_strategy%22%3A%22combined%22%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%22f393a5ca40427895ca85117b8db0e69b%22%7D%7D">here</a> which is a search for assemblies that contain at least one heavy water. This search can be divided into 1 attribute:</p>
+<p>Deuterated water count &gt;= 11</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q1</span> <span class="o">=</span> <span class="n">AttributeQuery</span><span class="p">(</span><span class="n">attribute</span><span class="o">=</span><span class="s2">&quot;rcsb_assembly_info.deuterated_water_count&quot;</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;greater_or_equal&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="n">result_polymers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">q1</span><span class="p">(</span><span class="s2">&quot;assembly&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id19">
+<h3>2a)<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<p>We can check to make sure the list has been successfully created by printing the first 10 elements of the list. These 10 elements should be the same first ten elements seen on the RCSB RDB search.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The following drugs are among the </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">)</span><span class="si">}</span><span class="s2"> assemblies with at least one heavy water:&quot;</span><span class="p">,</span> <span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id20">
+<h3>2b)<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<p>Now, we can begin downloading the files from the list we made. First, download this element in the list and then check to see if it was downloaded successfully. Then, open the file to see if its contents and in line with what is expected from the download.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">):</span>
+    <span class="n">result_polymers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">result_polymers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">test_validation</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;https://files.rcsb.org/download/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">.cif&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_validation</span><span class="o">.</span><span class="n">status_code</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id21">
+<h3>2c)<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<p>To further check, we can create a file and then read the contents of the file. Creating the file includes the creation of a directory (folder) in order to store the folder, which will be called ligands.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;assemblies/Heavy_Water&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;assemblies/Heavy_Water/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.cif&quot;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">test_validation</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;assemblies/Heavy_Water/</span><span class="si">{</span><span class="n">result_polymers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.cif&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">file_text</span> <span class="o">=</span> <span class="n">file1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">file_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id22">
+<h3>3)<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
+<p>Once you’ve confirmed that the file download occurred correctly, we can finish by downloading all of the files from the list we made previously into the folder we generated. The following block of code will perform this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">baseUrl</span> <span class="o">=</span> <span class="s2">&quot;https://files.rcsb.org/download/&quot;</span>
+
+<span class="k">for</span> <span class="n">ChemID</span> <span class="ow">in</span> <span class="n">result_polymers</span><span class="p">:</span>
+    <span class="n">cFile</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ChemID</span><span class="si">}</span><span class="s2">.cif&quot;</span>
+    <span class="n">cFileUrl</span> <span class="o">=</span> <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">cFile</span>
+    <span class="n">cFileLocal</span> <span class="o">=</span> <span class="s2">&quot;assemblies/Heavy_Water/&quot;</span> <span class="o">+</span> <span class="n">cFile</span> <span class="c1">#Do we need to make a local file, or is it expected they will fill in the code? </span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cFileUrl</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cFileLocal</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Drug_Search.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Drug Search</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Macromolecules.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Macromolecules</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-taken">Steps Taken</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-search">1) Creating the Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-validation-by-list">2a) Validation By List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-validation-by-file-request">2b) Validation By File Request</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-validation-by-file-download">2c) Validation By File Download</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-search-download">3) Complete Search Download</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-libraries">Importing Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-polymers-in-biological-assembly">Total Polymers in Biological Assembly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a">2a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b">2b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c">2c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-protein-chain">Single Protein Chain</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identical-chains">24 Identical Chains</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#immunoglobulin-fab-fragments-to-dimeric-antigen">Immunoglobulin Fab Fragments to Dimeric Antigen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">2a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">3)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-heavy-water">One Heavy Water</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">2a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">2b)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">2c)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">3)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
