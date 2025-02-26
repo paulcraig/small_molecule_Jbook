@@ -34,7 +34,7 @@ Once installed, launch JupyterLab with
 jupyter lab
 ```
 
-The following links are to Jupyter Notebooks that include RCSB PDB search examples.
+The following links are to Jupyter Notebooks that include RCSB PDB search examples. 
 
 
 ```{tableofcontents}
