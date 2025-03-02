@@ -49,7 +49,7 @@ jobs:
         jupyter-book build .
 
     # Upload the book's HTML as an artifact
-    - name: Upload artifact
+    - name: Upload Artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: "_build/html"
